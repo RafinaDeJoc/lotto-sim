@@ -1,0 +1,23 @@
+{
+  "name": "lotto-sim",
+  "version": "1.0.0",
+  "description": "lotto simulator",
+  "main": "app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafinaDeJoc/lotto-sim.git"
+  },
+  "author": "Jozsef Rafael Mihaly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafinaDeJoc/lotto-sim/issues"
+  },
+  "homepage": "https://github.com/RafinaDeJoc/lotto-sim#readme",
+  "dependencies": {
+    "ts-node-dev": "^2.0.0"
+  }
+}
