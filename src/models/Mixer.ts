@@ -1,14 +1,28 @@
+import TicketProcessor from "./TicketProcessor";
+
 export default class Mixer {
-    private numberRange = new Array;
     private winningNumbers = new Array;
     private playerTickets = new Array;
+    private ticketProcessor;
+
+    constructor () {
+        this.ticketProcessor = new TicketProcessor();  
+    }
 
     run() {
         this.initPlayerTickets();
         this.drawTheNumbers();
         console.log(this.winningNumbers);
-        console.log(this.playerTickets);
+        // console.log(this.playerTickets);
+        const result = this.ticketProcessor.processWinnerTickets(
+            this.winningNumbers,
+            this.playerTickets
+            );
+        for(const arrRes of result)
+            console.log(arrRes.length);
 
+        console.log(result[3]);
+        
     }
 
     private initNumberRange() {
@@ -36,7 +50,7 @@ export default class Mixer {
     }
 
     private initPlayerTickets() {
-        for (let player = 0; player < 4992576; player++) {
+        for (let player = 0; player < 15000000; player++) {
             this.playerTickets.push(this.setFiveNumbers());
         }
     }
